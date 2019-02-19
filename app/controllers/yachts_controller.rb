@@ -31,6 +31,7 @@ class YachtsController < ApplicationController
 
   def update
     @yacht.update(yacht_params)
+    redirect_to myyachts_yachts_path
   end
 
   def destroy

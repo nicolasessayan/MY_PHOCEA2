@@ -3,4 +3,8 @@
   <%= f.input :port %>
   <%= f.input :price %>
   <%= f.input :passengers_capacity %>
+  <div class="create-yacht-action">
+    <%= link_to "Back", root_path, class: "btn btn-back" %>
+    <%= f.submit "Add a yacht", class: "btn btn-validation" %>
+  </div>
 <% end %>
