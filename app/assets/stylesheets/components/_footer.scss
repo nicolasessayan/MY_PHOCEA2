@@ -1,0 +1,44 @@
+footer {
+  background-color: $dark-blue;
+  color: white;
+  padding: 20px 0;
+}
+
+.social-network {
+  display: flex;
+  width: 300px;
+  margin: 0 auto;
+  height: 100px;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 40px;
+}
+
+footer p {
+  font-size: 30px;
+  text-align: center;
+}
+
+footer i {
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.grid-width {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo {
+  width: 33.5%;
+  padding-left: 50px;
+}
+
+.contact {
+  width: 33%
+}
+
+.social {
+  width: 33.5%
+}

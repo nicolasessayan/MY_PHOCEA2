@@ -1,0 +1,50 @@
+.btn-validation {
+  padding: 10px 0;
+  width: 130px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: $light-blue;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(50,50,50,1);
+  &:hover {
+    color: white;
+    transition: 0.5s ease;
+    filter: brightness(0.85);
+    box-shadow: 0 0 15px rgba(20,20,20,1);
+  }
+}
+
+.btn-back {
+  padding: 10px 0;
+  width: 130px;
+  font-size: 14px;
+  font-weight: bold;
+  color: $light-blue;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(50,50,50,1);
+  &:hover {
+    color: $light-blue;
+    transition: 0.5s ease;
+    filter: brightness(0.85);
+    box-shadow: 0 0 15px rgba(20,20,20,1);
+  }
+}
+
+.btn-delete {
+  padding: 10px 0;
+  width: 130px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #FF3A20;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(50,50,50,1);
+  &:hover {
+    color: white;
+    transition: 0.5s ease;
+    filter: brightness(0.85);
+    box-shadow: 0 0 15px rgba(20,20,20,1);
+  }
+}
