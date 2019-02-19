@@ -5,17 +5,24 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.destroy_all
 Yacht.destroy_all
+User.destroy_all
 # Bookig.destroy_all
 
-flo = User.create(email: "florenthorta@yopmail.com", password: "azerty")
-nico = User.create(email: "nico@yopmail.com", password: "azerty")
-beber = User.create(email: "beber@yopmail.com", password: "azerty")
-patou = User.create(email: "patoch@yopmail.com", password: "azerty")
+flo = User.create(first_name: "Florent", last_name: "Horta", email: "florenthorta@yopmail.com", password: "azerty")
+nico = User.create(first_name: "Nicolas", last_name: "Essayan", email: "nico@yopmail.com", password: "azerty")
+nanard = User.create(first_name: "Bernard", last_name: "Tapie", email: "nanard@yopmail.com", password: "azerty")
+patoche = User.create(first_name: "Patrick", last_name: "Balkany", email: "patoche@yopmail.com", password: "azerty")
+
+flo.add_photo("j6jpwfnmc6b4t2wcilvh")
+nico.add_photo("h3wil96pe2oagsbwu9ij")
+nanard.add_photo("usmclq1ku0r6uhyhravv")
+patoche.add_photo("r20u0dtx9qzavfnsptxi")
+
+url_base = "http://res.cloudinary.com/duasacvax/image/upload/v1550593316/usmclq1ku0r6uhyhravv.jpg"
 
 Yacht.create(name: "Phocea", port: "Marseille", price: 20000, passengers_capacity: 12, user: flo)
 Yacht.create(name: "Boat boat", port: "Antibes", price: 30000, passengers_capacity: 18, user: nico)
-Yacht.create(name: "Bonbon", port: "Monaco", price: 10000, passengers_capacity: 8, user: beber)
-Yacht.create(name: "L'evasion", port: "St Tropez", price: 12000, passengers_capacity: 10, user: patou)
-Yacht.create(name: "Le redoutable", port: "Bonifacio", price: 18000, passengers_capacity: 14, user: beber)
+Yacht.create(name: "Bonbon", port: "Monaco", price: 10000, passengers_capacity: 8, user: nanard)
+Yacht.create(name: "L'evasion", port: "St Tropez", price: 12000, passengers_capacity: 10, user: patoche)
+Yacht.create(name: "Le redoutable", port: "Bonifacio", price: 18000, passengers_capacity: 14, user: nanard)
