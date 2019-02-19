@@ -6,7 +6,7 @@ class YachtsController < ApplicationController
   end
 
   def myyachts
-    @yachts = Yacht.where(user_id: current_user.id)
+    @myyachts = Yacht.where(user_id: current_user.id)
   end
 
   def show
