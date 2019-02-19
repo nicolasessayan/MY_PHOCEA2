@@ -1,0 +1,8 @@
+<%= simple_form_for [@yacht, @booking] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <div class="create-yacht-action">
+    <%= link_to "Back", root_path, class: "btn btn-back" %>
+    <%= f.submit "Book", class: "btn btn-validation" %>
+  </div>
+<% end %>
