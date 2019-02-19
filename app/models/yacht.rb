@@ -4,5 +4,5 @@ class Yacht < ApplicationRecord
   # validates :name, presence: true, uniqueness: true
   # validates :price, presence: true, numericality: { only_integer: true }
   # validates :passengers_capacity, presence: true, numericality: { only_integer: true }
-  # mount_uploader :photo, UserUploader
+  # mount_uploader :photo, PhotoUploader
 end
