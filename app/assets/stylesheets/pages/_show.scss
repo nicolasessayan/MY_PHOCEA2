@@ -1,0 +1,32 @@
+.head-img {
+  // overflow: hidden;
+  text-align: center;
+}
+.head-img img {
+  // width: 800px;
+  height: 500px;
+  padding-bottom: 50px;
+  // box-shadow: 5px 2px 2px #515456;
+}
+
+.list-inline {
+  // text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-inline-item-show {
+  display: inline;
+  font-size: 30px;
+  color: #303B56;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+h1 {
+  justify-content: center;
+}
+.btn-book {
+  text-align: center;
+  padding: 50px;
+}
