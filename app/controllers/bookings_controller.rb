@@ -8,10 +8,10 @@ class BookingsController < ApplicationController
     @yacht = Yacht.find(params[:yacht_id])
     @booking = Booking.new(booking_params)
     @booking.agreed_price = @yacht.price
-    @booking.user_id = current_user
+    @booking.user_id = current_user.id
     @booking.yacht = @yacht
     if @booking.save
-      redirect_to yacht_path(@yacht)
+      redirect_to root_path
     else
       render :new
     end
@@ -20,6 +20,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:yacht).permit(:start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end
