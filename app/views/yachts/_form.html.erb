@@ -1,0 +1,7 @@
+<%= simple_form_for @yacht do |f| %>
+  <%= f.input :name %>
+  <%= f.input :port %>
+  <%= f.input :price %>
+  <%= f.input :passengers_capacity %>
+  <%= f.submit "Add a yacht", class: "btn btn-validation" %>
+<% end %>
