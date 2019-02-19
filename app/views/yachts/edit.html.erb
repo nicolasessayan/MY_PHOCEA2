@@ -1,1 +1,8 @@
-
+<div class="container">
+  <h2 class="text-center title-form">Edit <%= @yacht.name %></h2>
+  <%= render 'form' %>
+  <div class="create-yacht-action">
+    <%= link_to "Back", myyachts_yachts_path, class: "btn btn-back" %>
+    <%= f.submit "Update", class: "btn btn-validation" %>
+  </div>
+</div>
