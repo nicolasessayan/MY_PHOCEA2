@@ -1,0 +1,19 @@
+<div class="container">
+  <h1 class="text-center"><%= @yacht.name %></h1>
+
+  <div class="head-img">
+    <img src="https://s1-ssl.dmcdn.net/Nvr8Z/x1080-QKH.jpg">
+  </div>
+
+  <ul class="list-inline">
+    <li class="list-inline-item-show"><i class="fas fa-anchor"></i>&nbsp;&nbsp;<%= @yacht.port %></li>
+    <li class="list-inline-item-show"><i class="fas fa-users"></i>&nbsp;&nbsp;<%= @yacht.passengers_capacity %></li>
+    <li class="list-inline-item-show"><i class="fas fa-euro-sign"></i>&nbsp;&nbsp;<%= @yacht.price %></li>
+  </ul>
+
+  <div class="btn-book">
+    <%= link_to "Book a boat", "#", class: "btn btn-validation" %>
+  </div>
+</div>
+
+
