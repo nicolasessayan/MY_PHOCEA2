@@ -7,6 +7,7 @@ class YachtsController < ApplicationController
 
   def myyachts
     @myyachts = Yacht.where(user_id: current_user.id)
+    @bookings = Booking.all
   end
 
   def show
