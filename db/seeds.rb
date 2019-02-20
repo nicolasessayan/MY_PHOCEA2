@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Yacht.destroy_all
 User.destroy_all
-# Bookig.destroy_all
+Booking.destroy_all
 
 flo = User.create(first_name: "Florent", last_name: "Horta", email: "florenthorta@yopmail.com", password: "azerty")
 nico = User.create(first_name: "Nicolas", last_name: "Essayan", email: "nico@yopmail.com", password: "azerty")
@@ -24,6 +24,12 @@ boatboat = Yacht.create(name: "Boat boat", port: "Antibes", price: 30000, passen
 bonbon = Yacht.create(name: "Bonbon", port: "Monaco", price: 10000, passengers_capacity: 8, user: nanard)
 evasion = Yacht.create(name: "L'evasion", port: "St Tropez", price: 12000, passengers_capacity: 10, user: patoche)
 redoutable = Yacht.create(name: "Le redoutable", port: "Bonifacio", price: 18000, passengers_capacity: 14, user: nanard)
+
+Booking.create(start_date: "Thu, 20 Feb 2020", end_date: "Sat, 20 Feb 2021", agreed_price: phocea.price, user: nanard, yacht: phocea)
+Booking.create(start_date: "Wed, 21 Feb 2020", end_date: "Fri, 23 Feb 2020", agreed_price: evasion.price, user: nanard, yacht: evasion)
+Booking.create(start_date: "Sat, 24 Feb 2020", end_date: "Mon, 26 Feb 2020", agreed_price: redoutable.price, user: flo, yacht: redoutable)
+Booking.create(start_date: "Thu, 20 Feb 2020", end_date: "Sat, 20 Feb 2021", agreed_price: bonbon.price, user: nico, yacht: bonbon)
+Booking.create(start_date: "Wed, 21 Feb 2020", end_date: "Fri, 23 Feb 2020", agreed_price: phocea.price, user: patoche, yacht: phocea)
 
 phocea.add_photo("p05gzduq6herum7alx9c")
 boatboat.add_photo("zg9th4dvhc43ducqzvhi")

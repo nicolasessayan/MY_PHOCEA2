@@ -1,0 +1,6 @@
+<div class="container">
+  <h1>Your rented yachts</h1>
+  <%= @mybookings.each do |booking| %>
+    <%= booking.agreed_price %>
+  <% end %>
+</div>
