@@ -28,8 +28,8 @@
       <%= f.input :photo_cache, as: :hidden %>
     </div>
 
-    <ul class="list-inline">
-      <li class="form-actions list-inline-item"><%= f.button :submit, "Sign up", class: "btn btn-validation" %></li>
+    <ul class="list-inline buttons-center">
+      <li class="form-actions list-inline-item "><%= f.button :submit, "Sign up", class: "btn btn-validation" %></li>
       <li class="form-actions list-inline-item"><%= link_to "Sign in", new_session_path(resource_name), class: "btn btn-back"%></li>
     </ul>
   <% end %>
