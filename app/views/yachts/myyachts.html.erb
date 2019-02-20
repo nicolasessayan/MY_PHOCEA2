@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Welcome aboard <%= @current_user.email %></h1>
+  <h1>Welcome aboard <%= @current_user.first_name %></h1>
   <%= render 'pages/carddashboard', yachts: @myyachts %>
   <br>
 </div>
