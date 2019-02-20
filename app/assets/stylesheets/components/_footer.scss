@@ -1,15 +1,15 @@
 footer {
   background-color: $dark-blue;
   color: white;
-  padding: 20px 0;
-  margin-top: 20px;
+  padding: 10px 0;
+  margin-top: 10px;
 }
 
 .social-network {
   display: flex;
   width: 300px;
   margin: 0 auto;
-  height: 100px;
+  height: 80px;
   align-items: center;
   justify-content: space-around;
   font-size: 40px;
@@ -19,14 +19,21 @@ footer {
 }
 
 footer p {
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
+  font-family: $headers-font;
 }
 
 footer i {
   &:hover {
     opacity: 0.7;
   }
+}
+
+footer li i {
+  font-size: 15px;
+  text-align: center;
+  font-family: $headers-font;
 }
 
 .grid-width {
