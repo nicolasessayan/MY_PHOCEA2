@@ -1,29 +1,28 @@
 <div class="container">
 
-<div class="container-show">
-  <div class="yacht-info">
-    <h1 class="text-center"><%= @yacht.name %></h1>
-    <h2>About the yacht</h2>
-    <ul class="list-inline">
-      <li><i class="fas fa-anchor"></i>&nbsp;&nbsp;<%= @yacht.port %></li>
-      <li><i class="fas fa-users"></i>&nbsp;&nbsp;<%= @yacht.passengers_capacity %></li>
-      <li><i class="fas fa-euro-sign"></i>&nbsp;&nbsp;<%= number_with_delimiter(@yacht.price, separator: " ") %></li>
-    </ul>
-    <h2>About the owner</h2>
-    <%= cl_image_tag @yacht.user.photo, class: "avatar" %>
-    <p><%= @yacht.user.first_name %>&nbsp;<%= @yacht.user.last_name %></p>
-    <a href="#book-yacht" class="btn btn-validation">Book this yacht</a>
+  <div class="container-show">
+    <div class="yacht-info">
+      <h1 class="text-center"><%= @yacht.name %></h1>
+      <h2>About the yacht</h2>
+      <ul class="list-inline">
+        <li><i class="fas fa-anchor"></i>&nbsp;&nbsp;<%= @yacht.port %></li>
+        <li><i class="fas fa-users"></i>&nbsp;&nbsp;<%= @yacht.passengers_capacity %></li>
+        <li><i class="fas fa-euro-sign"></i>&nbsp;&nbsp;<%= number_with_delimiter(@yacht.price, separator: " ") %></li>
+      </ul>
+      <h2>About the owner</h2>
+      <%= cl_image_tag @yacht.user.photo, class: "avatar" %>
+      <p><%= @yacht.user.first_name %>&nbsp;<%= @yacht.user.last_name %></p>
+      <a href="#book-yacht" class="btn btn-validation">Book this yacht</a>
+    </div>
+    <div class="yacht-img-show">
+      <%= cl_image_tag @yacht.photo %>
+    </div>
   </div>
-  <div class="yacht-img-show">
-    <%= cl_image_tag @yacht.photo %>
+
+  <div id="book-yacht">
+    <h1 class="text-center">Want to book this yacht ?</h1>
+      <%= render 'bookings/form' %>
   </div>
-</div>
-
-
-  <h1 class="text-center id="book-yacht">Want to book this yacht ?</h1>
-
-  <%= render 'bookings/form' %>
-
 </div>
 
 

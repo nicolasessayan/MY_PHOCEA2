@@ -37,6 +37,7 @@ h1 {
   width: 600px;
   border-radius: 5px;
   overflow: hidden;
+  box-shadow: 0 0 15px rgba(150,150,150,1);
 }
 
 .yacht-img-show img {
@@ -55,6 +56,7 @@ h1 {
 .yacht-info h2 {
   font-size: 25px;
   color: $dark-grey;
+  margin-top: 5px;
 }
 
 .yacht-info li {
