@@ -5,6 +5,8 @@
     <%= f.input :port %>
     <%= f.input :price %>
     <%= f.input :passengers_capacity %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
     <div class="create-yacht-action">
       <%= link_to "Back", myyachts_yachts_path, class: "btn btn-back" %>
       <%= f.submit "Update", class: "btn btn-validation" %>
