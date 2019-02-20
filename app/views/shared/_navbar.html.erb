@@ -13,12 +13,14 @@
       <!-- Links when logged in -->
       <%= link_to "My bookings", bookings_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "My yachts", myyachts_yachts_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Connected as #{current_user.first_name} #{current_user.last_name}", '#', class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "navbar-wagon-item navbar-wagon-link" %>
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
           <%= cl_image_tag current_user.photo, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li><a href="#">My profile</a></li>
+            <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+          </ul>
         </div>
       </div>
     <% else %>
