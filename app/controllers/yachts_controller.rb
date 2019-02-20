@@ -6,7 +6,7 @@ class YachtsController < ApplicationController
   end
 
   def myyachts
-    @myyachts = Yacht.where(user_id: current_user.id)
+    @myyachts = Yacht.all.select{ |obj| obj.user_id == current_user.id }
     @bookings = Booking.all
   end
 
