@@ -1,6 +1,10 @@
 <%= render 'banner' %>
 <div class="container">
   <h1 class="text-center">Our selection of top-class yachts</h1>
-  <%= render 'pages/cards', yachts: @yachts %>
+  <% if user_signed_in? %>
+    <%= render 'pages/cards', yachts: @othersyachts %>
+  <% else %>
+    <%= render 'pages/cards', yachts: @yachts %>
+  <% end %>
 <!--   <h1>Available in the best ports in the world</h1> -->
 </div>
