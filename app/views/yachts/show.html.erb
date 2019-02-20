@@ -11,9 +11,10 @@
     <li class="list-inline-item-show"><i class="fas fa-euro-sign"></i>&nbsp;&nbsp;<%= @yacht.price %></li>
   </ul>
 
-  <div class="btn-book">
-    <%= link_to "Book a boat", "#", class: "btn btn-validation" %>
-  </div>
+  <h1 class="text-center">Want to book this yacht ?</h1>
+
+  <%= render 'bookings/form' %>
+
 </div>
 
 
