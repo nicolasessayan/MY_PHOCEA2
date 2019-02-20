@@ -18,10 +18,17 @@ footer {
   color: white;
 }
 
-footer p {
+footer h3 {
   font-size: 20px;
   text-align: center;
   font-family: $headers-font;
+}
+
+footer p {
+  font-size: 15px;
+  text-align: center;
+  font-family: $headers-font;
+  padding-bottom: -10px;
 }
 
 footer i {
