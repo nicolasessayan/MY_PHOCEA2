@@ -18,7 +18,7 @@ class BookingsController < ApplicationController
   end
 
   def index
-    @bookings = Booking.where(user_id: current_user.id)
+    @mybookings = Booking.where(user_id: current_user.id)
   end
 
   private
