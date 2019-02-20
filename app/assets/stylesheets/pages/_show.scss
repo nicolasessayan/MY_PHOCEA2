@@ -9,24 +9,54 @@
   // box-shadow: 5px 2px 2px #515456;
 }
 
-.list-inline {
-  // text-align: center;
-  display: flex;
-  justify-content: space-between;
-}
-
-.list-inline-item-show {
-  display: inline;
-  font-size: 30px;
-  color: #303B56;
-  padding-left: 100px;
-  padding-right: 100px;
-}
-
 h1 {
   justify-content: center;
 }
 .btn-book {
   text-align: center;
   padding: 50px;
+}
+
+.container-show {
+  display: flex;
+  margin-top: 35px;
+  justify-content: space-between;
+  height: 400px;
+}
+
+.yacht-info {
+  width: 400px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(150,150,150,1);
+  border-radius: 5px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.yacht-img-show {
+  width: 600px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.yacht-img-show img {
+  width: 100%;
+  height: 100%;
+}
+
+.yacht-info h1 {
+  font-size: 30px;
+  margin: 0;
+  padding: 10px;
+  background-color: $dark-blue ;
+  color: white;
+}
+
+.yacht-info li {
+  font-size: 20px;
+  color: $dark-grey;
+}
+
+.yacht-info ul {
+  margin-top: 20px;
 }
