@@ -2,6 +2,7 @@
   <div class="my-yachts-header">
     <h1>Welcome aboard <%= @current_user.first_name %></h1>
     <a class="btn btn-validation" href='/yachts/new'>Add a yacht</a>
+    <h3>My yachts available for rent</h3>
   </div>
 
   <%= render 'pages/carddashboard', yachts: @myyachts %>
