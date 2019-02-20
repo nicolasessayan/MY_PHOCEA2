@@ -1,4 +1,8 @@
 <div class="container">
   <h1>Welcome aboard <%= @current_user.first_name %></h1>
+  <br>
+  <a class="btn btn-validation" href='/yachts/new'>ADD YACHT</a>
+  <br>
   <%= render 'pages/carddashboard', yachts: @myyachts %>
+
 </div>
