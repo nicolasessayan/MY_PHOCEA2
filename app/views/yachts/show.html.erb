@@ -8,11 +8,10 @@
       <li><i class="fas fa-anchor"></i>&nbsp;&nbsp;<%= @yacht.port %></li>
       <li><i class="fas fa-users"></i>&nbsp;&nbsp;<%= @yacht.passengers_capacity %></li>
       <li><i class="fas fa-euro-sign"></i>&nbsp;&nbsp;<%= number_with_delimiter(@yacht.price, separator: " ") %></li>
-      <a href="#book-yacht" class="btn btn-validation">Book this yacht</a>
     </ul>
     <h2>About the owner</h2>
     <ul class="list-inline">
-      <li><i class="fas fa-anchor"></i>&nbsp;&nbsp;<%= @yacht.port %></li>
+      <li><i class="fas fa-anchor"></i>&nbsp;&nbsp;<%= @yacht.user.first_name %></li>
       <li><i class="fas fa-users"></i>&nbsp;&nbsp;<%= @yacht.passengers_capacity %></li>
       <li><i class="fas fa-euro-sign"></i>&nbsp;&nbsp;<%= number_with_delimiter(@yacht.price, separator: " ") %></li>
       <a href="#book-yacht" class="btn btn-validation">Book this yacht</a>
