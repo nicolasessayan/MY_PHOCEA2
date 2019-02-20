@@ -11,9 +11,9 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Manage my bookings", '#', class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Manage my yachts", myyachts_yachts_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Connected as Nicolas Essayan", '#', class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "My bookings", bookings_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "My yachts", myyachts_yachts_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Connected as #{current_user.first_name} #{current_user.last_name}", '#', class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "navbar-wagon-item navbar-wagon-link" %>
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
@@ -23,7 +23,6 @@
       </div>
     <% else %>
       <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
   </div>
 </div>
