@@ -35,7 +35,7 @@ redoutable = Yacht.create(name: "Le redoutable", port: "Bonifacio", price: 18000
 Booking.create(start_date: "Thu, 21 Feb 2019", end_date: "Sun, 24 Feb 2019", agreed_price: phocea.price, user: nanard, yacht: phocea)
 Booking.create(start_date: "Tue, 26 Feb 2019", end_date: "Sun, 3 Mar 2019", agreed_price: phocea.price, user: rob, yacht: phocea)
 Booking.create(start_date: "Mon, 18 Mar 2019", end_date: "Sun, 24 Mar 2019", agreed_price: phocea.price, user: b, yacht: phocea)
-Booking.create(start_date: "Mon, 22 Abr 2019", end_date: "Sun, 28 Abr 2019", agreed_price: phocea.price, user: patoche, yacht: phocea)
+Booking.create(start_date: "Mon, 22 Apr 2019", end_date: "Sun, 28 Apr 2019", agreed_price: phocea.price, user: patoche, yacht: phocea)
 Booking.create(start_date: "Wed, 21 Feb 2020", end_date: "Fri, 23 Feb 2020", agreed_price: evasion.price, user: g, yacht: evasion)
 Booking.create(start_date: "Thu, 20 Feb 2020", end_date: "Sat, 20 Feb 2021", agreed_price: bonbon.price, user: nico, yacht: bonbon)
 Booking.create(start_date: "Sat, 24 Feb 2020", end_date: "Mon, 26 Feb 2020", agreed_price: redoutable.price, user: flip, yacht: redoutable)
