@@ -24,5 +24,12 @@ class PagesController < ApplicationController
     else
       @yachts = Yacht.all
     end
+    @ports = Port.where.not(latitude: nil, longitude: nil)
+    @markers = @ports.map do |port|
+      {
+        lng: port.longitude,
+        lat: port.latitude
+      }
+    end
   end
 end
