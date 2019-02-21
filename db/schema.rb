@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 2019_02_21_141339) do
     t.index ["yacht_id"], name: "index_bookings_on_yacht_id"
   end
 
-
   create_table "ports", force: :cascade do |t|
     t.string "name"
     t.string "photo"
