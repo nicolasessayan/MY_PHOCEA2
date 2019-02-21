@@ -1,8 +1,9 @@
 <%= render 'banner' %>
 <div class="container">
+  <%= render 'yachts/searchform' %>
   <h1 class="text-center">Our selection of top-class yachts</h1>
   <% if user_signed_in? %>
-    <%= render 'pages/cards', yachts: @othersyachts %>
+    <%= render 'pages/cards', yachts: @yachts %>
   <% else %>
     <%= render 'pages/cards', yachts: @yachts %>
   <% end %>
