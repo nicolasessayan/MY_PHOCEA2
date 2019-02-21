@@ -28,8 +28,11 @@ class PagesController < ApplicationController
     @markers = @ports.map do |port|
       {
         lng: port.longitude,
-        lat: port.latitude
+        lat: port.latitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { port: port }),
+        image_url: helpers.asset_url('minianchorblue.png')
       }
     end
+    # @port = Port.find(params[:id])
   end
 end
