@@ -7,9 +7,42 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Destroying all...."
 
-Yacht.destroy_all
-User.destroy_all
 Booking.destroy_all
+Yacht.destroy_all
+Port.destroy_all
+User.destroy_all
+
+puts "Creating ports...."
+
+monaco = Port.create(name: "Port Hercule", address: "Monaco")
+barcelona = Port.create(name: "Marina Vela", address: "Barcelona")
+kotor = Port.create(name: "Marina Cattaro", address: "Kotor")
+limassol = Port.create(name: "Limassol Marina", address: "Limassol")
+abudhabi = Port.create(name: "Yas Marina", address: "Abu Dhabi")
+virgin = Port.create(name: "Yacht Haven Grande", address: "Virgin Islands")
+miami = Port.create(name: "Boca Raton Marina", address: "Miami Beach")
+capcod = Port.create(name: "Hyannis Marina", address: "Cap Cod")
+macao = Port.create(name: "Pousada Marina", address: "Macao")
+male = Port.create(name: "Maldives Marina Berthing", address: "Male")
+mauritius = Port.create(name: "La Balise Marina", address: "Mauritius")
+capetown = Port.create(name: "V&A Waterfront", address: "Cape Town")
+rio = Port.create(name: "Jet Paradise Marine & Club", address: "Rio de Janeiro")
+longbeach = Port.create(name: "Rainbow Harbor", address: "Long Beach")
+
+monaco.add_photo("tgsipjueyjjmzr7grr17")
+barcelona.add_photo("ehesb5w7mih8qmykmvbg")
+kotor.add_photo("gginuzi2qxxdjhpebrty")
+limassol.add_photo("xhma9gckcoxkj89q60f8")
+abudhabi.add_photo("o8nip0dkclrali8shdk8")
+virgin.add_photo("zordcwibxov0h3fog34f")
+miami.add_photo("tfrjdxxfw4lswsvdujyo")
+capcod.add_photo("gginuzi2qxxdjhpebrty")
+macao.add_photo("poybzfjekwv9l8u8r4xd")
+male.add_photo("ymtyu6e5loevq30mikx6")
+mauritius.add_photo("zordcwibxov0h3fog34f")
+capetown.add_photo("kt9wzpvwbcoevjkesqxw")
+rio.add_photo("xekh1qfdwr7jnkbwfnkm")
+longbeach.add_photo("xhma9gckcoxkj89q60f8")
 
 puts "Creating users...."
 
@@ -37,18 +70,18 @@ chun.add_photo("g1lrqr1fchjjfoaze9ei")
 
 puts "Creating yachts...."
 
-phocea = Yacht.create(name: "Phocea", port: "Marseille", price: 20000, passengers_capacity: 12, user: flo)
-boatboat = Yacht.create(name: "Boat boat", port: "Antibes", price: 30000, passengers_capacity: 18, user: nico)
-bonbon = Yacht.create(name: "Bonbon", port: "Monaco", price: 10000, passengers_capacity: 8, user: nanard)
-evasion = Yacht.create(name: "L'evasion", port: "St Tropez", price: 12000, passengers_capacity: 10, user: patoche)
-redoutable = Yacht.create(name: "Le redoutable", port: "Bonifacio", price: 18000, passengers_capacity: 14, user: nanard)
-highfive = Yacht.create(name: "Le highfive", port: "Long beach", price: 22000, passengers_capacity: 19, user: tania)
-daykiry = Yacht.create(name: "Le daykiry", port: "Nagoya", price: 24000, passengers_capacity: 11, user: patoche)
-pussypussylove = Yacht.create(name: "Le pussypussylove", port: "Rio de Janeiro", price: 31000, passengers_capacity: 9, user: chun)
-calypso = Yacht.create(name: "Le calypso", port: "Rotterdam", price: 21000, passengers_capacity: 10, user: nico)
-nautilus = Yacht.create(name: "Le nautilus", port: "Cap town", price: 25000, passengers_capacity: 11, user: flo)
-effroyable = Yacht.create(name: "Le effroyable", port: "Lisbonne", price: 21000, passengers_capacity: 14, user: patoche)
-mistral = Yacht.create(name: "Le mistral", port: "Fos sur mer", price: 20000, passengers_capacity: 19, user: nanard)
+phocea = Yacht.create(name: "Phocea", port: monaco, price: 20000, passengers_capacity: 12, user: flo)
+boatboat = Yacht.create(name: "Boat boat", port: monaco, price: 30000, passengers_capacity: 18, user: nico)
+bonbon = Yacht.create(name: "Bonbon", port: monaco, price: 10000, passengers_capacity: 8, user: nanard)
+evasion = Yacht.create(name: "L'evasion", port: virgin, price: 12000, passengers_capacity: 10, user: patoche)
+redoutable = Yacht.create(name: "Le redoutable", port: miami, price: 18000, passengers_capacity: 14, user: nanard)
+highfive = Yacht.create(name: "Le highfive", port: capcod, price: 22000, passengers_capacity: 19, user: tania)
+daykiry = Yacht.create(name: "Le daykiry", port: macao, price: 24000, passengers_capacity: 11, user: patoche)
+pussypussylove = Yacht.create(name: "Le pussypussylove", port: rio, price: 31000, passengers_capacity: 9, user: chun)
+calypso = Yacht.create(name: "Le calypso", port: male, price: 21000, passengers_capacity: 10, user: nico)
+nautilus = Yacht.create(name: "Le nautilus", port: longbeach, price: 25000, passengers_capacity: 11, user: flo)
+effroyable = Yacht.create(name: "Le effroyable", port: mauritius, price: 21000, passengers_capacity: 14, user: patoche)
+mistral = Yacht.create(name: "Le mistral", port: abudhabi, price: 20000, passengers_capacity: 19, user: nanard)
 
 phocea.add_photo("p05gzduq6herum7alx9c")
 boatboat.add_photo("zg9th4dvhc43ducqzvhi")
