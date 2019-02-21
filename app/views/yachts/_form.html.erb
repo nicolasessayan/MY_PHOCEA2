@@ -3,8 +3,12 @@
   <%= f.input :port %>
   <%= f.input :price %>
   <%= f.input :passengers_capacity %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
+  <%= f.input :photo1 %>
+  <%= f.input :photo1_cache, as: :hidden %>
+  <%= f.input :photo2 %>
+  <%= f.input :photo2_cache, as: :hidden %>
+  <%= f.input :photo3 %>
+  <%= f.input :photo3_cache, as: :hidden %>
   <div class="create-yacht-action">
     <%= link_to "Back", root_path, class: "btn btn-back" %>
     <%= f.submit "Add a yacht", class: "btn btn-validation" %>
