@@ -13,8 +13,30 @@
 @import "components/index";
 @import "pages/index";
 
+.wrapper{
+  background-color: #f5f5f5;
+  min-height: calc(100vh - 245px);
+  margin-bottom: -40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.form.container{
+  background-color: white;
+  max-width: 560px;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  border-style: solid;
+  border-color: lightgrey ;
+  border-width: 1px;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+
+}
+
 ul.list-inline.buttons-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
