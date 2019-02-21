@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2019_02_21_141339) do
     t.index ["yacht_id"], name: "index_bookings_on_yacht_id"
   end
 
+
   create_table "ports", force: :cascade do |t|
     t.string "name"
     t.string "photo"
@@ -60,8 +61,10 @@ ActiveRecord::Schema.define(version: 2019_02_21_141339) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "photo"
+    t.string "photo1"
     t.bigint "port_id"
+    t.string "photo2"
+    t.string "photo3"
     t.index ["port_id"], name: "index_yachts_on_port_id"
     t.index ["user_id"], name: "index_yachts_on_user_id"
   end
