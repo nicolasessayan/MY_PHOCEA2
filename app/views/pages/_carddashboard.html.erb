@@ -9,7 +9,7 @@
       <div class="card-description">
           <ul class="name-edit">
             <li> <h2><%= yacht.name %></h2></li>
-          <li>Edit&nbsp; <%= link_to "<i class='fas fa-pen'></i>".html_safe, edit_yacht_path(yacht.id) %></li>
+          <li>Edit&nbsp; <%= link_to "<i class='fas fa-pen flaticon'></i>".html_safe, edit_yacht_path(yacht.id) %></li>
           </ul>
         <ul class="list-inline">
           <li class="list-inline-item"><i class="fas fa-anchor"></i>&nbsp;<%= yacht.port %></li>
@@ -21,13 +21,13 @@
     <% if yacht.bookings.count == 0 %>
       <div class="no-bookings">
         <div class="no-bookings-items">
-          <i class="far fa-clock fa-6x timeicon"></i>
+          <i class="far fa-clock fa-5x flaticon"></i>
         </div>
         <div class="no-bookings-items">
-          <p><em>You don't have any bookings request yet for this yacht, would you like to make some changes ?</em></p>
+          <p><em>You don't have any booking requests yet for this yacht, would you like to make some changes ?</em></p>
         </div>
         <div class="no-bookings-items">
-          <%= link_to "Edit this yacht".html_safe, edit_yacht_path(yacht.id), class: "btn-validation btn-booking" %>
+          <%= link_to "Edit this yacht".html_safe, edit_yacht_path(yacht.id), class: "btn btn-validation btn-booking" %>
         </div>
       </div>
     <% else %>

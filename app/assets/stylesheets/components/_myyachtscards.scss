@@ -9,17 +9,19 @@
 
 .card-dashboard {
   display: flex;
+  min-height: 300px;
   margin-bottom: 50px;
-  border: 1px solid $dark-blue;
+  background-color: #ffffff;
   border-radius: 5px;
+  box-shadow: 0 0 15px rgba(150,150,150,1);
 }
 
 .bookings-by-yachts {
   margin: 0;
   display: block;
-  list-style-type: disc;
+  // list-style-type: disc;
   margin-block-start: 1em;
-  margin-block-end: 1em;
+  // margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   padding-inline-start: 10px;
@@ -60,9 +62,19 @@
 
 .card-dashboard .card-category {
   width: 400px;
-  height: 280px;
   align-items: center;
+  box-shadow: 0 0 0;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
+
+.card-dashboard .card-category .card-image{
+  height: calc(100% - 100px);
+  border-bottom-right-radius: 25px;
+}
+
 
 .pending {
   font-weight: bold;
@@ -84,9 +96,11 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.timeicon {
+.flaticon {
   color: $dark-blue;
 }
 
