@@ -2,11 +2,7 @@
 <div class="container">
   <%= render 'yachts/searchform' %>
   <h1 class="text-center">Our selection of top-class yachts</h1>
-  <% if user_signed_in? %>
-    <%= render 'pages/cards', yachts: @yachts %>
-  <% else %>
-    <%= render 'pages/cards', yachts: @yachts %>
-  <% end %>
+  <%= render 'pages/cards', yachts: @yachts.limit(9) %>
   <h1>Available in the best ports in the world</h1>
   <div
     id="map"

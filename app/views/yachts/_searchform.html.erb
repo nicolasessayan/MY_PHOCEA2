@@ -1,22 +1,29 @@
 <div class="search-yacht">
   <%= form_tag root_path, method: :get do %>
 
-    <label for="query_price"><i class="fas fa-ship"></i>&nbsp;Yacht's name</label>
+    <label for="query_name"><i class="fas fa-ship"></i>&nbsp;Yacht's name</label>
     <%= text_field_tag :query_name,
       params[:query_name],
       class: "form-control",
       placeholder: "ex : Phocea"
     %>
 
+    <label for="query_port"><i class="fas fa-swimming-pool"></i>&nbsp;City</label>
+    <%= text_field_tag :query_port,
+      params[:query_port],
+      class: "form-control",
+      placeholder: "ex : Monaco"
+    %>
+
     <label for="query_price"><i class="fas fa-euro-sign"></i>&nbsp;Price / day max</label>
-    <%= text_field_tag :query_price,
+    <%= number_field_tag :query_price,
       params[:query_price],
       class: "form-control",
       placeholder: "ex : 20 000"
     %>
 
     <label for="query_guests"><i class="fas fa-users"></i>&nbsp;Number of guests</label>
-    <%= text_field_tag :query_guests,
+    <%= number_field_tag :query_guests,
       params[:query_guests],
       class: "form-control",
       placeholder: "ex : 10"
