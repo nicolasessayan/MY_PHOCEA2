@@ -1,13 +1,21 @@
 <%= simple_form_for @yacht do |f| %>
-  <%= f.input :name %>
-  <%= f.input :port %>
-  <%= f.input :price %>
-  <%= f.input :passengers_capacity %>
-  <%= f.input :photo1 %>
+  <%= f.input :name,
+              required: true%>
+  <%= f.association :port,
+              :label_method => lambda { |port| "#{port.name} | #{port.address}" },
+              required: true%>
+  <%= f.input :price,
+              required: true%>
+  <%= f.input :passengers_capacity,
+              required: true%>
+  <%= f.input :photo1,
+              required: true %>
   <%= f.input :photo1_cache, as: :hidden %>
-  <%= f.input :photo2 %>
+  <%= f.input :photo2 ,
+              required: true %>
   <%= f.input :photo2_cache, as: :hidden %>
-  <%= f.input :photo3 %>
+  <%= f.input :photo3 ,
+              required: true %>
   <%= f.input :photo3_cache, as: :hidden %>
   <div class="create-yacht-action">
     <%= f.submit "Add a yacht", class: "btn btn-validation" %>
