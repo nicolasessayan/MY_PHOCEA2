@@ -1,12 +1,15 @@
 <div class="container-fluid">
   <% if @mybookings.count == 0 %>
 <!-- When no bookings -->
-    <h1>You don't have any bookings yet</h1>
-    <div>
-      <%= image_tag "logo.png", height: 250 %>
-    </div>
-    <div>
-      <%= link_to 'Find your dreamed yacht', root_path, class: "btn btn-validation mybookings-no" %>
+    <div class="no-bookings-page">
+
+      <h1>You don't have any bookings yet</h1>
+      <div>
+        <%= image_tag "logo.png", height: 250 %>
+      </div>
+      <div>
+        <%= link_to 'Find your dreamed yacht', root_path, class: "btn btn-validation mybookings-no" %>
+      </div>
     </div>
 
   <% else %>
