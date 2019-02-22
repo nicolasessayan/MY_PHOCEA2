@@ -1,0 +1,12 @@
+.mybookings-page {
+  min-height: calc(100vh - 70px - 170px);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.mybookings-no{
+  width: 210px;
+  vertical-align: center;
+  margin: 20px;
+}
