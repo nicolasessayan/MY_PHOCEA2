@@ -1,3 +1,6 @@
-<div> <%= cl_image_tag port.photo, height: 140, width: 180, crop: :fill %> </div>
-<div><strong> <%= port.address %></strong></div>
-<div> <%= port.name %></div>
+<div> <%= link_to port_path(port) do %>
+  <%= cl_image_tag port.photo, height: 140, width: 180, crop: :fill %> </div>
+  <% end %>
+<div><strong><%= port.address %></strong></div>
+<div><%= port.name %></div>
+<div>number of yachts:&nbsp;<%= port.yachts.count %></div>
