@@ -1,5 +1,5 @@
-  <% yachts.each do |yacht| %>
-<div class="card-dashboard">
+<% yachts.each do |yacht| %>
+  <div class="card-dashboard">
     <div class="card-category" >
       <div class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= cl_image_path yacht.photo1 %>')">
         <ul class="list-inline">
@@ -9,7 +9,7 @@
       <div class="card-description">
           <ul class="name-edit">
             <li> <h2><%= yacht.name %></h2></li>
-          <li>Edit&nbsp; <%= link_to "<i class='fas fa-pen'></i>".html_safe, edit_yacht_path(yacht.id) %></li>
+          <li>Edit&nbsp; <%= link_to "<i class='fas fa-pen flaticon'></i>".html_safe, edit_yacht_path(yacht.id) %></li>
           </ul>
         <ul class="list-inline">
           <li class="list-inline-item"><i class="fas fa-anchor"></i>&nbsp;<%= yacht.port %></li>
@@ -18,17 +18,50 @@
         </ul>
       </div>
     </div>
-      <% yacht.bookings.each do |booking| %>
-    <div class="bookinguser">
-      <% total =  (booking.end_date - booking.start_date)*booking.yacht.price %></p>
-      <div class="booking-user">
-        <p><%= cl_image_tag booking.user.photo, class: "avatarmyyatchs" %></p>
-        <p><strong><%= booking.user.first_name %><br/><%= booking.user.last_name %></strong><br/></p>
-        <p><strong>Start date:&nbsp;</strong><br/><%= booking.start_date.to_s(:rfc822) %></p><br/>
-        <p><strong>End date:&nbsp;</strong><br/><%= booking.end_date.to_s(:rfc822) %></p>
-        <p><strong>Total price:&nbsp;</strong><br/><%= number_with_delimiter((total*1.2).to_i, separator: " ") %></strong> <em><i class="fas fa-euro-sign"></i>&nbsp;&nbsp;incl. taxes</em>
+    <% if yacht.bookings.count == 0 %>
+      <div class="no-bookings">
+        <div class="no-bookings-items">
+          <i class="far fa-clock fa-5x flaticon"></i>
+        </div>
+        <div class="no-bookings-items">
+          <p><em>You don't have any booking requests yet for this yacht, would you like to make some changes ?</em></p>
+        </div>
+        <div class="no-bookings-items">
+          <%= link_to "Edit this yacht".html_safe, edit_yacht_path(yacht.id), class: "btn btn-validation btn-booking" %>
+        </div>
       </div>
-    </div>
-      <% end %>
-</div>
-  <% end %>
+    <% else %>
+      <ul class="bookings-by-yachts">
+        <% yacht.bookings.each do |booking| %>
+          <% total = (booking.end_date - booking.start_date)*booking.yacht.price %></p>
+          <li class="booking-user">
+            <div class="booking-userpicture">
+              <%= cl_image_tag booking.user.photo, class: "avatarmyyatchs" %>
+            </div>
+            <div class="book-name-date">
+              <h3><%= booking.user.first_name %> <%= booking.user.last_name %></h3>
+              <p>From <%= booking.start_date.to_s(:rfc822) %> to <%= booking.end_date.to_s(:rfc822) %></p>
+            </div>
+            <div class="booking-status">
+             <% if booking.status == 'Approved'%>
+                <p class="approved"><%= booking.status.capitalize %></p>
+              <% elsif booking.status == 'Declined' %>
+                <p class="declined"><%= booking.status.capitalize %></p>
+              <% else %>
+                <p class="pending"><%= booking.status.capitalize %></p>
+              <% end %>
+              <p>
+                <%= number_with_delimiter((total*1.2).to_i, separator: " ") %> <em><i class="fas fa-euro-sign"></i>&nbsp;&nbsp;inc. tax.</em>
+              </p>
+            </div>
+            <% if booking.status == "Pending" %>
+              <div class="status-buttons">
+                <%= link_to "Approve", booking_path(booking, booking: {status: 'Approved'}), method: :put, class: "btn-approve"%><%= link_to "Decline", booking_path(booking, booking: {status: 'Declined'}), method: :put, class: "btn-decline" %>
+              </div>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+<% end %>

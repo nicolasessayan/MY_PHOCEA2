@@ -1,4 +1,8 @@
 class BookingsController < ApplicationController
+  def index
+    @mybookings = Booking.where(user_id: current_user.id)
+  end
+
   def new
     @yacht = Yacht.find(params[:yacht_id])
     @booking = Booking.new
@@ -17,13 +21,20 @@ class BookingsController < ApplicationController
     end
   end
 
-  def index
-    @mybookings = Booking.where(user_id: current_user.id)
+  def edit
+    @booking = Booking.find(params[:id])
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.status = params[:booking][:status]
+    @booking.save
+    redirect_to myyachts_yachts_path
   end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date, :status)
   end
 end

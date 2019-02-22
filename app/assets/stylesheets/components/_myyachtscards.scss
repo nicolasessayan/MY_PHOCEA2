@@ -1,0 +1,118 @@
+.my-yachts-header {
+  display: flex;
+  align-items: center;
+}
+
+.my-yachts-header h1 {
+  margin-right: 40px;
+}
+
+.card-dashboard {
+  display: flex;
+  min-height: 300px;
+  margin-bottom: 50px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(150,150,150,1);
+}
+
+.bookings-by-yachts {
+  margin: 0;
+  display: block;
+  // list-style-type: disc;
+  margin-block-start: 1em;
+  // margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 10px;
+  margin-top: 0px !important;
+}
+
+.booking-user {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(220,224,244,0.4);
+  justify-content: space-between;
+}
+
+.booking-user p {
+  font-size: 14px;
+  color: $dark-grey;
+  margin-right: 30px;
+}
+
+.booking-userpicture {
+  display: flex;
+}
+
+.book-name-date {
+  // display: flex;
+  padding-left: 10px;
+  min-width: 80px;
+}
+
+.book-name-date h3 {
+  font-size: 16px;
+}
+
+.booking-title {
+  font-weight: bold;
+}
+
+.card-dashboard .card-category {
+  width: 400px;
+  align-items: center;
+  box-shadow: 0 0 0;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.card-dashboard .card-category .card-image{
+  height: calc(100% - 100px);
+  border-bottom-right-radius: 25px;
+}
+
+
+.pending {
+  font-weight: bold;
+}
+
+.approved {
+  color: $light-blue !important;
+  font-weight: bold;
+}
+
+.declined {
+  color: $red !important;
+  font-weight: bold;
+}
+
+.no-bookings {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.flaticon {
+  color: $dark-blue;
+}
+
+.no-bookings-items {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 0px !important;
+  text-align: center;
+  max-width: 80%;
+}
+
+.no-bookings-items p {
+  margin-block-end: 0px;
+}
