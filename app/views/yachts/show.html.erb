@@ -1,31 +1,27 @@
-<div class="three-pictures">
-  <div class="picture-left">
-    <%= cl_image_tag @yacht.photo1, id: "photo1" %>
-  </div>
-  <div class="picture-right">
-    <%= cl_image_tag @yacht.photo2, id: "photo2" %>
-    <%= cl_image_tag @yacht.photo3, id: "photo3" %>
-  </div>
-</div>
+<div class="card-show-detail">
+  <div class="info-yacht-card">
 
+    <div class="container-head">
+      <div class="yacht-info">
+        <h1 class="text-center"><%= @yacht.name %></h1>
+        <div class="img-avatar-yacht">
+          <%= cl_image_tag @yacht.photo1, class: 'avatar-yacht' %>
+        </div>
+        <ul class="list-inline ">
+          <li><i class="fas fa-anchor"></i>&nbsp;&nbsp;<%= @yacht.port.address %></li>
+          <li><i class="fas fa-users"></i>&nbsp;&nbsp;<%= @yacht.passengers_capacity %></li>
+          <li><i class="fas fa-euro-sign"></i>&nbsp;&nbsp;<%= number_with_delimiter(@yacht.price, separator: " ") %>&nbsp;/&nbsp;day</li>
+        </ul>
+      </div>
 
-<div class="container">
+      <div class="owner-info">
+        <h1>About the owner</h1>
+        <%= cl_image_tag @yacht.user.photo, class: "avatar-yacht" %>
+        <p><%= @yacht.user.first_name %>&nbsp;<%= @yacht.user.last_name %></p>
+      </div>
 
-  <div class="container-show">
-    <div class="yacht-info">
-      <h1 class="text-center"><%= @yacht.name %></h1>
-      <h2>About the yacht</h2>
-      <ul class="list-inline">
-        <li><strong><%= @yacht.port.address %></strong></li>
-        <li><i class="fas fa-anchor"></i>&nbsp;&nbsp;<%= @yacht.port.name %></li>
-        <li><i class="fas fa-users"></i>&nbsp;&nbsp;<%= @yacht.passengers_capacity %></li>
-        <li><i class="fas fa-euro-sign"></i>&nbsp;&nbsp;<%= number_with_delimiter(@yacht.price, separator: " ") %></li>
-      </ul>
-      <h2>About the owner</h2>
-      <%= cl_image_tag @yacht.user.photo, class: "avatar" %>
-      <p><%= @yacht.user.first_name %>&nbsp;<%= @yacht.user.last_name %></p>
-      <a href="#book-yacht" class="btn btn-validation">Book this yacht</a>
     </div>
+
   </div>
 
   <div id="book-yacht">
@@ -33,5 +29,3 @@
       <%= render 'bookings/form' %>
   </div>
 </div>
-
-
