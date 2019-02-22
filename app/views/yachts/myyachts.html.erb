@@ -1,9 +1,21 @@
-<div class="container">
-  <div class="my-yachts-header">
-    <h1>Welcome aboard <%= @current_user.first_name %></h1>
-    <a class="btn btn-validation" href='/yachts/new'>Add a yacht</a>
-  </div>
+<div class="container myyachts-page">
+  <% if @myyachts.count == 0 %>
+    <h1>You don't have any yacht to rent yet</h1>
+    <div>
+      <%= image_tag "logo.png", height: 250 %>
+    </div>
+    <div class='myyachts-no-elements'>
+      <h3>You're a proud yacht owner ?</h3>
+    </div>
+    <div>
+      <a class="btn btn-validation myyachts-no-elements" href='/yachts/new'>Add a yacht</a>
+    </div>
+  <% else %>
+    <div class="my-yachts-header">
+      <h1>Welcome aboard <%= @current_user.first_name %></h1>
+      <a class="btn btn-validation" href='/yachts/new'>Add a yacht</a>
+    </div>
 
-  <%= render 'pages/carddashboard', yachts: @myyachts %>
-
+    <%= render 'pages/carddashboard', yachts: @myyachts %>
+  <% end %>
 </div>
