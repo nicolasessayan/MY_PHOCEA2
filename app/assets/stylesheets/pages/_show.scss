@@ -24,15 +24,6 @@ h1 {
   height: 400px;
 }
 
-.yacht-info {
-  width: 400px;
-  background-color: white;
-  box-shadow: 0 0 15px rgba(150,150,150,1);
-  border-radius: 5px;
-  text-align: center;
-  overflow: hidden;
-}
-
 .yacht-img-show {
   width: 600px;
   border-radius: 5px;
@@ -86,24 +77,87 @@ h1 {
   background-size: cover;
 }
 
-.three-pictures {
+
+
+.container-head {
   display: flex;
-  width: 100%;
-  overflow: hidden;
+  flex-direction : column;
+  width: 500px;
+  justify-content: space-between;
+  background-color: white;
+
+
+  h1 {
+    background-color: white;
+    color: $dark-grey;
+    font-size: 40px;
+    margin: 0;
+  }
+  h2 {
+    font-size: 25px;
+    margin: 0;
+  }
+}
+
+.card-show-detail {
+  display: flex;
+  box-shadow: 0 0 15px rgba(150,150,150,1);
+  margin: 50px 100px;
+}
+
+.owner-info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#book-yacht {
+  width: 700px;
+  margin: 0;
+  padding-right: 40px;
+  background-color: white;
+}
+
+.info-yacht-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar-yacht {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.yacht-info ul {
+  text-align: center;
+}
+
+.img-avatar-yacht {
+  text-align: center;
+}
+
+.owner-info p {
+  color: $dark-grey;
+}
+
+#book-yacht .btn {
+  margin-top: 15px;
 }
 
 .picture-left {
+  width: 60%;
+  overflow: hidden;
   height: 500px;
 }
 
-.picture-left img {
+.background-img-show {
+  width: 100%;
   height: 500px;
 }
 
-.picture-right {
-  height: 250px;
-}
-
-.picture-right img {
-  height: 250px;
+.background-img-show {
+    height: 500px;
 }
