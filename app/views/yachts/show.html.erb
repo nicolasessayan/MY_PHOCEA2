@@ -1,12 +1,18 @@
-<div class="three-pictures">
-  <div class="picture-left">
-    <%= cl_image_tag @yacht.photo1, id: "photo1" %>
-  </div>
-  <div class="picture-right">
-    <%= cl_image_tag @yacht.photo2, id: "photo2" %>
-    <%= cl_image_tag @yacht.photo3, id: "photo3" %>
+
+<div class="container-fluid">
+  <div class="row nopaddingbooking">
+    <div class="col-xs-12 col-sm-8 nopaddingbooking">
+        <%= cl_image_tag @yacht.photo1, class: 'bookingpic1' %>
+    </div>
+    <div class="col-xs-12 col-sm-4 nopaddingbooking">
+      <%= cl_image_tag @yacht.photo2, class: 'bookingpic2' %>
+      <%= cl_image_tag @yacht.photo3, class: 'bookingpic2' %>
+    </div>
   </div>
 </div>
+
+
+
 
 
 <div class="container">
