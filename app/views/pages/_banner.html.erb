@@ -1,14 +1,7 @@
-  <div class="banner">
+<div class="banner">
   <div class="container">
     <h1 class="text-center">Change your yacht as you change your mind</h1>
     <p class="text-center">Lease yours somewhere. Rent one anywhere.</p>
-    <div class="text-center">
-      <% if user_signed_in? %>
-      <% else %>
-        <a class="btn btn-validation" href='/users/sign_up'>SIGN UP</a>
-        <a class="btn btn-back" href='/users/sign_in'>SIGN IN</a>
-  <!--     <a class="btn btn-delete" href="#">DELETE</a> -->
-      <% end %>
-    </div>
   </div>
+  <%= render 'yachts/searchform' %>
 </div>

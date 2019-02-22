@@ -21,6 +21,7 @@ class YachtsController < ApplicationController
   def create
     @yacht = Yacht.new(yacht_params)
     @yacht.user = current_user
+    @yacht.port = Port.find_by(address: params[:yacht]["port"])
     if @yacht.save
       redirect_to myyachts_yachts_path
     else
@@ -52,7 +53,7 @@ class YachtsController < ApplicationController
   end
 
   def yacht_params
-    params.require(:yacht).permit(:name, :port, :price, :passengers_capacity, :photo)
+    params.require(:yacht).permit(:name, :price, :passengers_capacity, :photo1, :photo2, :photo3)
   end
 
 end
