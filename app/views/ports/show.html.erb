@@ -1,7 +1,7 @@
+<div class="port-img-show"><%= cl_image_tag @port.photo, width: 1450, height: 600, crop: 'scale', class: "port-img-show" %></div>
 <div class="container">
   <div class="container-show-port">
     <div class="port-info">
-      <div class="port-img-show"><%= cl_image_tag @port.photo %></div>
       <h1 class="text-center"><%= @port.address %>&nbsp;-&nbsp;<%= @port.name %></h1>
       <h2>Yacht in this port</h2>
         <%= render 'pages/cards', yachts: @port.yachts %>

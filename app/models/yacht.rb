@@ -9,6 +9,14 @@ class Yacht < ApplicationRecord
   mount_uploader :photo2, PhotoUploader
   mount_uploader :photo3, PhotoUploader
 
+  validates :name, presence: true
+  validates :port, presence: true
+  validates :price, presence: true
+  validates :passengers_capacity, presence: true
+  validates :photo1, presence: true
+  validates :photo2, presence: true
+  validates :photo3, presence: true
+
   def add_photos(id1, id2, id3)
     url1 = "http://res.cloudinary.com/duasacvax/image/upload/v1550593316/#{id1}.jpg"
     url2 = "http://res.cloudinary.com/duasacvax/image/upload/v1550593316/#{id2}.jpg"

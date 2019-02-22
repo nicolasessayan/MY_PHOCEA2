@@ -1,0 +1,64 @@
+// .mybookings-page {
+//   min-height: calc(100vh - 70px - 170px);
+//   align-items: center;
+//   display: flex;
+//   flex-direction: column;
+//   width: 100vw;
+//   margin-right: 0px;
+//   margin-left: 0px;
+//   padding: 0px;
+// }
+
+// .mybookings-no{
+//   width: 210px;
+//   vertical-align: center;
+//   margin: 20px;
+// }
+
+// .each-booking {
+//   width: 100vw;
+//   display: grid;
+//   grid-template-columns: 3fr 1fr 1fr;
+//   grid-template-rows: 1fr 1fr;
+// }
+
+// .booking-big-picture1 {
+//   position: relative;
+// }
+
+.bookingpicture1 {
+  background-size: cover;
+  background-position: center;
+  width: 50vw;
+  height: 400px;
+}
+
+// .h1bookingname {
+//   position: absolute;
+//   top: 0;
+// }
+
+// .booking-infos-other-pictures {
+
+// }
+
+
+.bookingpicture2 {
+  background-size: cover;
+  background-position: center;
+  width: 25vw;
+  height: 200px;
+}
+
+// .bookingpicture3 {
+//   grid-row: 1 / span 1;
+//   grid-column: 3 / span 1;
+//   background-size: cover;
+//   background-position: center;
+// }
+
+.booking-pictures-port-infos {
+  height: 200px;
+  width: 50vw;
+  background-color: #ffffff;
+}

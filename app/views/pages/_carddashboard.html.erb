@@ -18,6 +18,7 @@
         </ul>
       </div>
     </div>
+    <!-- WHEN NO YACHT BOOKINGS -->
     <% if yacht.bookings.count == 0 %>
       <div class="no-bookings">
         <div class="no-bookings-items">
@@ -30,6 +31,7 @@
           <%= link_to "Edit this yacht".html_safe, edit_yacht_path(yacht.id), class: "btn btn-validation btn-booking" %>
         </div>
       </div>
+    <!-- WHEN AT LEAST 1 YACHT BOOKINGS -->
     <% else %>
       <ul class="bookings-by-yachts">
         <% yacht.bookings.each do |booking| %>

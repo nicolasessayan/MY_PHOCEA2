@@ -1,0 +1,14 @@
+.myyachts-page {
+  min-height: calc(100vh - 70px - 170px);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.myyachts-no-elements{
+  margin: 20px;
+}
+
+.myyachts-no-elements h3{
+  color: $dark-blue;
+}

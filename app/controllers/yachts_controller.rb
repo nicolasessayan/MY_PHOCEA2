@@ -21,7 +21,7 @@ class YachtsController < ApplicationController
   def create
     @yacht = Yacht.new(yacht_params)
     @yacht.user = current_user
-    @yacht.port = Port.find_by(address: params[:yacht]["port"])
+    @yacht.port = Port.find_by(id: params[:yacht]["port_id"])
     if @yacht.save
       redirect_to myyachts_yachts_path
     else
@@ -33,6 +33,8 @@ class YachtsController < ApplicationController
   end
 
   def update
+    @yacht.update(yacht_params)
+    @yacht.port = Port.find_by(id: params[:yacht]["port_id"])
     @yacht.update(yacht_params)
     redirect_to myyachts_yachts_path
   end
@@ -53,7 +55,7 @@ class YachtsController < ApplicationController
   end
 
   def yacht_params
-    params.require(:yacht).permit(:name, :price, :passengers_capacity, :photo1, :photo2, :photo3)
+    params.require(:yacht).permit(:name, :price, :passengers_capacity, :photo1, :photo2, :photo3, :port)
   end
 
 end

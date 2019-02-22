@@ -1,19 +1,23 @@
-<div class="container">
-  <h2 class="text-center title-form">Edit <%= @yacht.name %></h2>
-  <%= simple_form_for @yacht do |f| %>
-    <%= f.input :name %>
-    <%= f.input :port %>
-    <%= f.input :price %>
-    <%= f.input :passengers_capacity %>
-    <%= f.input :photo1 %>
-    <%= f.input :photo1_cache, as: :hidden %>
-    <%= f.input :photo2 %>
-    <%= f.input :photo2_cache, as: :hidden %>
-    <%= f.input :photo3 %>
-    <%= f.input :photo3_cache, as: :hidden %>
-    <div class="create-yacht-action">
-      <%= link_to "Back", myyachts_yachts_path, class: "btn btn-back" %>
-      <%= f.submit "Update", class: "btn btn-validation" %>
-    </div>
-  <% end %>
+<div class="wrapper3">
+  <div class="form container">
+    <h2 class="text-center title-form">Edit <%= @yacht.name %></h2>
+    <%= simple_form_for @yacht do |f| %>
+      <%= f.input :name %>
+      <%= f.association :port,
+              :label_method => lambda { |port| "#{port.name} | #{port.address}" },
+              required: true%>
+      <%= f.input :price %>
+      <%= f.input :passengers_capacity %>
+      <%= f.input :photo1 %>
+      <%= f.input :photo1_cache, as: :hidden %>
+      <%= f.input :photo2 %>
+      <%= f.input :photo2_cache, as: :hidden %>
+      <%= f.input :photo3 %>
+      <%= f.input :photo3_cache, as: :hidden %>
+      <div class="create-yacht-action">
+        <%= link_to "Back", myyachts_yachts_path, class: "btn btn-back" %>
+        <%= f.submit "Update", class: "btn btn-validation" %>
+      </div>
+    <% end %>
+  </div>
 </div>

@@ -1,29 +1,61 @@
-<div class="container">
-
-  <h1>Your bookings</h1>
-  <% @mybookings.each do |booking| %>
-    <div class="container-show">
-
-      <div class="yacht-img-show">
-        <%= cl_image_tag booking.yacht.photo1 %>
-      </div>
-
-      <div class="yacht-info">
-        <h1 class="text-center"><%= booking.yacht.name %></h1>
-        <h2>About this booking</h2>
-        <p>From <strong><%= booking.start_date.to_s(:rfc822) %></strong> to <strong><%= booking.end_date.to_s(:rfc822) %></strong></h2>
-          <% total =  (booking.end_date - booking.start_date)*booking.yacht.price %></p>
-        <p><i class="fas fa-anchor"></i>&nbsp;&nbsp;<%= booking.yacht.port.address %></p>
-        <p><i class="fas fa-users"></i>&nbsp;&nbsp;<%= booking.yacht.passengers_capacity %></p>
-        <p><i class="fas fa-euro-sign"></i>&nbsp;<strong><%= number_with_delimiter((total*1.2).to_i, separator: " ") %></strong> <em>incl. taxes</em></p>
-
-        <h2> About the owner</h2>
-        <%= cl_image_tag booking.yacht.user.photo, class: "avatar" %>
-        <p>&nbsp;&nbsp;<%= booking.yacht.user.first_name %></p>
-      </div>
-
+<div class="container-fluid">
+  <% if @mybookings.count == 0 %>
+<!-- When no bookings -->
+    <h1>You don't have any bookings yet</h1>
+    <div>
+      <%= image_tag "logo.png", height: 250 %>
+    </div>
+    <div>
+      <%= link_to 'Find your dreamed yacht', root_path, class: "btn btn-validation mybookings-no" %>
     </div>
 
-  <% end %>
+  <% else %>
+<!-- When user have bookings -->
+    <h1>Your bookings</h1>
+    <% @mybookings.each do |booking| %>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <div class="booking-big-picture1">
+            <%= cl_image_tag booking.yacht.photo1, class: 'bookingpicture1' %>
+            <h1 class="h1bookingname"><%= booking.yacht.name %></h1>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                <%= cl_image_tag booking.yacht.photo2, class: 'bookingpicture2' %>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <%= cl_image_tag booking.yacht.photo3, class: 'bookingpicture2' %>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="booking-pictures-port-infos">
+              <div class="row">
 
+                <div class="col-xs-12 col-sm-6">
+                  <h2>About this booking</h2>
+                  <p>From <strong><%= booking.start_date.to_s(:rfc822) %></strong> to <strong><%= booking.end_date.to_s(:rfc822) %></strong></h2>
+                  <% total =  (booking.end_date - booking.start_date)*booking.yacht.price %></p>
+                  <p><i class="fas fa-anchor"></i>&nbsp;&nbsp;<%= booking.yacht.port.address %></p>
+                  <p><i class="fas fa-users"></i>&nbsp;&nbsp;<%= booking.yacht.passengers_capacity %></p>
+                  <p><i class="fas fa-euro-sign"></i>&nbsp;<strong><%= number_with_delimiter((total*1.2).to_i, separator: " ") %></strong> <em>incl. taxes</em></p>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <h2> About the owner</h2>
+                  <%= cl_image_tag booking.yacht.user.photo, class: "avatar" %>
+                  <p>&nbsp;&nbsp;<%= booking.yacht.user.first_name %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    <% end %>
+
+
+  <% end %>
 </div>
