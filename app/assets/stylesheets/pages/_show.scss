@@ -91,6 +91,28 @@ h1 {
   background-size: cover;
 }
 
+.three-pictures {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.picture-left {
+  height: 500px;
+}
+
+.picture-left img {
+  height: 500px;
+}
+
+.picture-right {
+  height: 250px;
+}
+
+.picture-right img {
+  height: 250px;
+ {
+ 
 .port-info h2 {
   color: $dark-grey;
 }
