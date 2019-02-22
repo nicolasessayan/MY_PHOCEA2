@@ -13,8 +13,6 @@
 
 <div class="card-show-detail">
   <div class="info-yacht-card">
-
-
     <div class="container-head">
       <div class="yacht-info">
         <h1 class="text-center"><%= @yacht.name %></h1>
@@ -27,17 +25,12 @@
           <li><i class="fas fa-euro-sign"></i>&nbsp;&nbsp;<%= number_with_delimiter(@yacht.price, separator: " ") %>&nbsp;/&nbsp;day</li>
         </ul>
       </div>
-
-<div class="container">
       <div class="owner-info">
         <h1>About the owner</h1>
         <%= cl_image_tag @yacht.user.photo, class: "avatar-yacht" %>
         <p><%= @yacht.user.first_name %>&nbsp;<%= @yacht.user.last_name %></p>
       </div>
-
-
     </div>
-
   </div>
 
   <div id="book-yacht">
