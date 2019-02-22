@@ -1,33 +1,47 @@
-<div class="search-yacht">
+<div class="form container">
   <%= form_tag root_path, method: :get do %>
 
-    <label for="query_name"><i class="fas fa-ship"></i>&nbsp;Yacht's name</label>
-    <%= text_field_tag :query_name,
-      params[:query_name],
-      class: "form-control",
-      placeholder: "ex : Phocea"
-    %>
+    <div class="search-label">
+      <label for="query_name"><i class="fas fa-ship"></i>&nbsp;Yacht's name</label>
+      <%= text_field_tag :query_name,
+        params[:query_name],
+        class: "form-control",
+        placeholder: "ex : Phocea"
+      %>
+    </div>
 
-    <label for="query_port"><i class="fas fa-swimming-pool"></i>&nbsp;City</label>
-    <%= text_field_tag :query_port,
-      params[:query_port],
-      class: "form-control",
-      placeholder: "ex : Monaco"
-    %>
+    <div class="search-label">
+      <label for="query_port"><i class="fas fa-anchor"></i>&nbsp;City</label>
+      <%= text_field_tag :query_port,
+        params[:query_port],
+        class: "form-control",
+        placeholder: "ex : Monaco"
+      %>
+    </div>
 
-    <label for="query_price"><i class="fas fa-euro-sign"></i>&nbsp;Price / day max</label>
-    <%= number_field_tag :query_price,
-      params[:query_price],
-      class: "form-control",
-      placeholder: "ex : 20 000"
-    %>
+    <div class="search-label">
+      <label for="query_price"><i class="fas fa-euro-sign"></i>&nbsp; / day max</label>
+      <%= number_field_tag :query_price,
+        params[:query_price],
+        class: "form-control",
+        placeholder: "ex : 20 000"
+      %>
+    </div>
 
-    <label for="query_guests"><i class="fas fa-users"></i>&nbsp;Number of guests</label>
-    <%= number_field_tag :query_guests,
-      params[:query_guests],
-      class: "form-control",
-      placeholder: "ex : 10"
+    <div class="search-label">
+      <label for="query_guests"><i class="fas fa-users"></i>&nbsp;Number of guests</label>
+      <%= number_field_tag :query_guests,
+        params[:query_guests],
+        class: "form-control",
+        placeholder: "ex : 10"
     %>
-    <button name="button" type="submit" class="btn btn-validation">Search</button>
+    </div>
+
+    <div class="search-button">
+      <ul class="list-inline buttons-center">
+        <button name="button" type="submit" class="btn btn-validation">Search</button>
+      </ul>
+    </div>
+
   <% end %>
 </div>

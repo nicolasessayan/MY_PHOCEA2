@@ -5,7 +5,7 @@
     <div class="container-show">
 
       <div class="yacht-img-show">
-        <%= cl_image_tag booking.yacht.photo %>
+        <%= cl_image_tag booking.yacht.photo1 %>
       </div>
 
       <div class="yacht-info">
@@ -13,13 +13,13 @@
         <h2>About this booking</h2>
         <p>From <strong><%= booking.start_date.to_s(:rfc822) %></strong> to <strong><%= booking.end_date.to_s(:rfc822) %></strong></h2>
           <% total =  (booking.end_date - booking.start_date)*booking.yacht.price %></p>
-        <p><i class="fas fa-anchor"></i>&nbsp;&nbsp;<%= booking.yacht.port %></p>
+        <p><i class="fas fa-anchor"></i>&nbsp;&nbsp;<%= booking.yacht.port.address %></p>
         <p><i class="fas fa-users"></i>&nbsp;&nbsp;<%= booking.yacht.passengers_capacity %></p>
         <p><i class="fas fa-euro-sign"></i>&nbsp;<strong><%= number_with_delimiter((total*1.2).to_i, separator: " ") %></strong> <em>incl. taxes</em></p>
 
         <h2> About the owner</h2>
         <%= cl_image_tag booking.yacht.user.photo, class: "avatar" %>
-        <p><i class="fas fa-anchor"></i>&nbsp;&nbsp;<%= booking.yacht.user.first_name %></p>
+        <p>&nbsp;&nbsp;<%= booking.yacht.user.first_name %></p>
       </div>
 
     </div>

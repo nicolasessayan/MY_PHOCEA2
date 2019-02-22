@@ -1,9 +1,8 @@
 <%= render 'banner' %>
 <div class="container">
-  <%= render 'yachts/searchform' %>
-  <h1 class="text-center">Our selection of top-class yachts</h1>
-  <%= render 'pages/cards', yachts: @yachts.limit(9) %>
-  <h1>Available in the best ports in the world</h1>
+  <h1 class="text-center">Our selection of world-class yachts...</h1>
+  <%= render 'pages/cards', yachts: @yachts.sample(9) %>
+  <h1 class="text-center">...available across the world's oceans</h1>
   <div
     id="map"
     style="width: 100%;
