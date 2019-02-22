@@ -27,8 +27,9 @@ class BookingsController < ApplicationController
 
   def update
     @booking = Booking.find(params[:id])
-    @booking.update(booking_params_params)
-    redirect_to
+    @booking.status = params[:booking][:status]
+    @booking.save
+    redirect_to myyachts_yachts_path
   end
 
   private
